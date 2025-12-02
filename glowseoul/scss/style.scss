@@ -13,8 +13,32 @@ html > body {
 }
 
 /* 커스텀 */
-div {
-  width: 200px;
-  height: 200px;
-  background-color: red;
+
+// 탑바 구현 시작
+.top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 2px solid red;
+
+  .logo {
+    display: inline-block;
+
+    img {
+      width: 40%;
+      height: 40%;
+      max-height: 40%;
+    }
+  }
 }
+
+.top-bar__inner {
+  padding-top: 40px;
+  padding-inline: 3.5%;
+  // paddin-left, padding-right 3.5%;
+  width: 100%;
+  display: flex;
+}
+
+//탑바 구현 끝
