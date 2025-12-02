@@ -1,62 +1,78 @@
 <!DOCTYPE html>
-<html lang="ko
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>glowseoul 프로젝트</title>
-  <!--테일윈드 불러오기-->
-  <script defer src="https://unpkg.com/@tailwindcss/browser@4"></script>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>glowseoul 프로젝트</title>
 
-<!-- 폰트어썸 불러오기-->
-<link  
-  rel="stylesheet" 
-  href="cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.mis.css"
-/>
+    <!--테일윈드 불러오기-->
+    <script defer src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
-  <!-- 공통 js 연결-->
-  <script src="./script/script.js"></script>
+    <!-- 폰트어썸 불러오기-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
 
-  <!-- 공통 css 연결--> 
-  <link rel="stylesheet" href="./css/style.css" />
-</head>
-<body>
-  <div class="site-wrap">
-    <header class="top-bar">
-      <div class="top-bar__inner">
-        <div class="logo-box flex items-center">
-          <a href="#" class="logo">
-            <img src="./images/long logo.png" alt="glow seoul logo">
-          </a>
-        </div>
+    <!-- 공통 js 연결-->
+    <script src="./script/script.js"></script>
+
+    <!-- 공통 css 연결-->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div class="site-wrap">
+      <header class="top-bar">
+        <div class="top-bar__inner">
+          <div class="logo-box flex items-center">
+            <a href="#" class="logo">
+              <img src="./images/long logo.png" alt="glow seoul logo" />
+            </a>
+          </div>
 
           <nav class="top-bar__menu-1 ml-auto">
             <ul class="menu flex">
               <li class="menu-item menu-hover">
                 <a href="#" class="menu-item-text">About Us</a>
               </li>
+
               <li class="menu-item">
                 <a href="#" class="menu-item-text">Service</a>
               </li>
+
               <li class="menu-item">
                 <a href="#" class="menu-item-text">Price</a>
               </li>
+
               <li class="menu-item">
                 <a href="#" class="menu-item-text">Gym</a>
               </li>
+
               <li class="menu-item">
                 <a href="#" class="menu-item-text">In Media</a>
               </li>
+
               <li class="menu-item">
                 <a href="#" class="menu-item-text">Contact</a>
               </li>
+
+              <!-- ★★ 여기 수정됨 ★★ -->
               <li class="menu-item">
                 <a href="#" class="menu-item-text">Kor</a>
+
+                <div class="sub-menu-box">
+                  <ul class="sub-menu">
+                    <li class="sub-menu-list">
+                      <a href="#" class="sub-menu-text">Eng</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
             </ul>
-
           </nav>
-      </div>
-    </header>
-  </div>
-</body>
+        </div>
+      </header>
+    </div>
+  </body>
 </html>
