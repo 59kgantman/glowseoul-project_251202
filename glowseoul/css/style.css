@@ -9,6 +9,18 @@ html > body {
   font-family: "GmarketSansMedium";
 }
 
+/* 🔵 공통 애니메이션 (fade-up) */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* 커스텀 */
 .top-bar {
   position: absolute;
@@ -245,12 +257,68 @@ html > body {
 .section-1__right-content .btn-link a::after {
   content: "";
   position: absolute;
-  width: 70px;
-  height: 2px;
+  width: 50px;
+  height: 1px;
   background-color: #fff;
-  top: 50%;
+  top: 30%;
   left: calc(100% + 10px);
   transform: translateY(-50%);
+}
+
+/* 🔵 문의하기 버튼 가로쓰기 강제 */
+.section-1__right-content .btn-link a {
+  writing-mode: horizontal-tb !important;
+  white-space: nowrap;
+}
+
+.section-2 {
+  background-color: #000;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-block: clamp(80px, 6vw, 140px);
+  /* 모바일 (max-width: 768px 이하) */
+}
+.section-2 .section-2__container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+.section-2 .section-2__left {
+  text-align: left;
+  flex: 1;
+}
+.section-2 .section-2__left .section-2__title {
+  font-size: 34px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 25px;
+}
+.section-2 .section-2__left .section-2__text {
+  font-size: 20px;
+  color: #b7b7b7;
+  line-height: 1.65;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .section-2 .section-2__left {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+.section-2 .section-2__right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.section-2 .section-2__right img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 12px;
+  display: block;
 }
 
 /* -------------------------
@@ -292,6 +360,10 @@ html > body {
     display: none !important;
   }
 }
+.hamburger.active span {
+  background-color: #fff !important;
+}
+
 /* -------------------------
    모바일 메뉴
 ---------------------------- */
@@ -301,7 +373,7 @@ html > body {
   right: 0;
   width: 100%;
   height: 100vh;
-  background: white;
+  background: black;
   padding-top: 120px;
   transform: translateY(-100%);
   opacity: 0;
@@ -323,7 +395,7 @@ html > body {
   transition: 0.4s ease-out;
 }
 .mobile-nav ul li a {
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 .mobile-nav.open {
@@ -351,4 +423,136 @@ html > body {
 }
 .mobile-nav.open ul li:nth-child(6) {
   transition-delay: 0.65s;
+}
+
+@media (max-width: 768px) {
+  .section-1__container {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 20px;
+  }
+  .section-1__right-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .btn-link a {
+    display: inline-block;
+  }
+}
+@media (max-width: 768px) {
+  /* 텍스트 좌우 여백 */
+  .section-1__left-content {
+    padding: 0 40px;
+  }
+  /* 🔵 모바일에서 Team ANT 폰트 크기 줄이기 */
+  .section-1__head .head-main-title {
+    font-size: 85px;
+    line-height: 1.1;
+  }
+  /* 문의하기 버튼도 동일하게 중앙에 */
+  .section-1__right-content {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .section-2__container {
+    flex-direction: column;
+    text-align: left;
+    gap: 40px;
+    padding: 0 50px;
+  }
+  .section-2__left {
+    width: 100%;
+  }
+  .section-2__right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .section-2__right img {
+    max-width: 100%;
+  }
+  .section-2__title {
+    font-size: 26px !important;
+  }
+  .section-2__text {
+    font-size: 18px !important;
+  }
+}
+/* =========================================================
+   🔵 Section 2 타이틀 — Section 1과 동일한 스타일 적용
+========================================================= */
+.section-2 .section-2__sub-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #b9b9b9;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+.section-2 .section-2__main-title {
+  font-size: 45px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.05;
+  margin-bottom: 25px;
+}
+.section-2 .section-2__text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #b7b7b7;
+  line-height: 1.65;
+  padding-left: 20px;
+}
+
+/* 🔵 Section 2 모바일 반응형 — Section 1과 동일하게 축소 */
+@media (max-width: 768px) {
+  .section-2 .section-2__sub-title {
+    font-size: 22px;
+  }
+  .section-2 .section-2__main-title {
+    font-size: 30px;
+  }
+  .section-2 .section-2__text {
+    font-size: 18px;
+  }
+}
+/* ---------------------------------------
+   🔵 Section 1 — 모바일에서 문의하기 버튼 중앙 정렬
+---------------------------------------- */
+@media (max-width: 768px) {
+  .section-1__right-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .section-1__right-content .btn-link {
+    position: static; /* absolute 해제 */
+    margin-top: 10px;
+  }
+  .section-1__right-content .btn-link a {
+    display: inline-block;
+  }
+}
+/* ---------------------------------------
+   🔵 Section 1 — 모바일에서 버튼이 텍스트를 침범하지 않도록 강제 분리
+---------------------------------------- */
+@media (max-width: 768px) {
+  .section-1__container {
+    flex-direction: column; /* 가로 → 세로 배치 */
+    align-items: center; /* 가운데 정렬 */
+    text-align: center;
+  }
+  .section-1__right-content {
+    width: 100%;
+    margin-top: 20px; /* 텍스트와 공간 확보 */
+    display: flex;
+    justify-content: center;
+  }
+  .section-1__right-content .btn-link {
+    position: static;
+  }
 }
