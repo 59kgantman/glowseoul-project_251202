@@ -28,7 +28,7 @@ html > body {
 
 // 탑바 구현 시작
 .top-bar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;

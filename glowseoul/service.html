@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | Glow Seoul</title>
+    <title>Service | Glow Seoul</title>
 
     <!-- Tailwind -->
     <script defer src="https://unpkg.com/@tailwindcss/browser@4"></script>
@@ -16,7 +16,7 @@
 
     <!-- 공통 CSS -->
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/faq.css" />
+    <link rel="stylesheet" href="./css/service.css" />
   </head>
 
   <body class="bg-black text-white">
@@ -44,7 +44,9 @@
                 <a href="./about.html" class="menu-item-text">About</a>
               </li>
               <li class="menu-item">
-                <a href="./service.html" class="menu-item-text">Service</a>
+                <a href="./service.html" class="menu-item-text active"
+                  >Service</a
+                >
               </li>
               <li class="menu-item">
                 <a href="./price.html" class="menu-item-text">Price</a>
@@ -58,7 +60,7 @@
                 >
               </li>
               <li class="menu-item">
-                <a href="./faq.html" class="menu-item-text active">FAQ</a>
+                <a href="./faq.html" class="menu-item-text">FAQ</a>
               </li>
               <li class="menu-item">
                 <a href="./contact.html" class="menu-item-text">Contact</a>
@@ -79,8 +81,8 @@
       <nav class="mobile-nav">
         <ul>
           <li><a href="./about.html">About</a></li>
-          <li><a href="./price.html">Price</a></li>
           <li><a href="./service.html">Service</a></li>
+          <li><a href="./price.html">Price</a></li>
           <li>
             <a href="https://map.naver.com/p/entry/place/1109130661">Gym</a>
           </li>
@@ -89,78 +91,37 @@
         </ul>
       </nav>
 
-      <!-- ★ Hero Section : Glow Seoul Style -->
-      <section class="faq-hero">
+      <!-- ★ Hero Section : Glow Seoul -->
+      <section class="service-hero">
         <div class="hero-inner fade-up">
-          <h1 class="faq-title">FAQ</h1>
-          <p class="faq-subtext">자주 묻는 질문들</p>
+          <h1 class="service-title">SERVICE</h1>
+          <p class="service-subtext">팀앤트 온라인 & 오프라인 프로그램</p>
 
-          <!-- 히어로 언더라인 -->
+          <!-- 언더라인 -->
           <div class="hero-underline"></div>
         </div>
       </section>
-    </div>
 
-<!-- ★ FAQ Section -->
-<section class="faq-section">
-  <div class="faq-inner">
-    <!-- 왼쪽 질문 리스트 -->
-    <div class="faq-questions fade-up delay-0">
-      <ul>
-        <li class="faq-item active" data-answer="answer1">온라인 코칭은 어떻게 진행되나요?</li>
-        <li class="faq-item" data-answer="answer2">오프라인 PT는 어떤 방식인가요?</li>
-        <li class="faq-item" data-answer="answer3">식단 관리는 포함인가요?</li>
-        <li class="faq-item" data-answer="answer4">환불 정책은 어떻게 되나요?</li>
-        <li class="faq-item" data-answer="answer5">운동 초보도 신청 가능한가요?</li>
-      </ul>
-    </div>
+      <!-- 🔵 SERVICE SELECT SECTION -->
+      <section class="service-select-section fade-up">
+        <div class="service-select-inner">
+          <!-- 온라인 코칭 -->
+          <a href="./online.html" class="service-card">
+            <div class="card-inner">
+              <h2>온라인코칭</h2>
+              <p>영상 피드백 · 식단 가이드 · 체형 분석</p>
+            </div>
+          </a>
 
-    <!-- 오른쪽 답변 영역 -->
-    <div class="faq-answer-box fade-up  delay-1">
-      <div id="answer1" class="faq-answer show">
-        <h3>온라인 코칭 진행 방식</h3>
-        <p>
-          회원님의 목표와 현재 상태를 기반으로 맞춤형 프로그램을 설계하며, 
-          주 1~2회 피드백과 영상 교정이 함께 제공됩니다.
-        </p>
-      </div>
-
-      <div id="answer2" class="faq-answer">
-        <h3>오프라인 PT 방식</h3>
-        <p>
-          일산 본점에서 1:1 개인 지도로 진행되며, 운동 목적과 레벨에 맞춰 
-          세부 커리큘럼으로 진행합니다.
-        </p>
-      </div>
-
-      <div id="answer3" class="faq-answer">
-        <h3>식단 관리 포함 여부</h3>
-        <p>
-          모든 프로그램에는 기본적인 식단 가이드가 포함되며, 필요 시 
-          추가적인 관리 옵션도 제공됩니다.
-        </p>
-      </div>
-
-      <div id="answer4" class="faq-answer">
-        <h3>환불 정책 안내</h3>
-        <p>
-          환불 기준은 이용 기간과 잔여 횟수에 따라 차등 적용되며, 
-          자세한 내용은 문의 시 안내해드립니다.
-        </p>
-      </div>
-
-      <div id="answer5" class="faq-answer">
-        <h3>운동 초보 신청 가능 여부</h3>
-        <p>
-          네, 완전 초보도 충분히 가능합니다.  
-          모든 회원 분들은 처음엔 초보였고, 기초부터 차근차근 지도합니다.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+          <!-- 오프라인 PT -->
+          <a href="./offline.html" class="service-card">
+            <div class="card-inner">
+              <h2>오프라인PT</h2>
+              <p>일산 본점 1:1 전문 개인 트레이닝</p>
+            </div>
+          </a>
+        </div>
+      </section>
 
       <!-- ★ Footer (공통) -->
       <footer class="site-footer">
@@ -168,7 +129,12 @@
           <div class="footer-left">
             <img src="./images/팀앤트 로고 색반전.png" class="footer-logo" />
             <div class="footer-sns">
-              <a href="https://naver.me/GipdUq2N" class="sns-item naver-icon" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://naver.me/GipdUq2N"
+                class="sns-item naver-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg width="26" height="26" viewBox="0 0 24 24">
                   <rect width="24" height="24" rx="4" fill="#03C75A"></rect>
                   <path
@@ -220,7 +186,5 @@
     </div>
 
     <script src="./script/script.js"></script>
-
-
   </body>
 </html>

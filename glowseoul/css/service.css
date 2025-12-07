@@ -1,0 +1,126 @@
+@charset "UTF-8";
+/* ======================
+      Service HERO
+====================== */
+.service-hero {
+  width: 100%;
+  background: #000;
+  text-align: center;
+  /* 원래 코드 대비 중복 해결:
+     height / padding 충돌 → 마지막 padding만 사용 */
+  padding: 300px 0 100px;
+  /* 등장 애니메이션 */
+  opacity: 0;
+  animation: heroFadeUp 1.2s ease-out forwards;
+  animation-delay: 0.2s;
+}
+.service-hero .service-title {
+  font-size: 72px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.service-hero .service-sub,
+.service-hero .service-subtext {
+  font-size: 20px;
+  opacity: 0.8;
+  margin-bottom: 24px;
+}
+.service-hero .hero-underline {
+  width: 0; /* 처음에는 0 */
+  height: 1px;
+  background-color: #fff;
+  margin: 20px auto 0;
+  animation: expandLine 1s ease-out forwards;
+  animation-delay: 0.5s; /* 텍스트 fade-up 끝나고 시작 */
+  opacity: 0;
+  margin-top: -5px;
+}
+
+/* 언더라인 애니메이션 */
+@keyframes expandLine {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    width: 350px; /* 원하는 길이 조절 가능 */
+    opacity: 1;
+  }
+}
+/* 히어로 엔터 애니메이션 */
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ==============================
+     SERVICE SELECT SECTION
+============================== */
+.service-select-section {
+  width: 100%;
+  padding: 0px 20px 160px;
+  background: #000;
+  /* 카드 공통 스타일 */
+}
+.service-select-section .service-select-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+@media (max-width: 900px) {
+  .service-select-section .service-select-inner {
+    grid-template-columns: 1fr;
+  }
+}
+.service-select-section .service-card {
+  display: block;
+  padding: 70px 40px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 16px;
+  text-align: center;
+  transition: 0.35s;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+}
+.service-select-section .service-card:hover {
+  background: #181818;
+  border-color: #fff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.25), 0 0 40px rgba(255, 255, 255, 0.18), 0 0 60px rgba(255, 255, 255, 0.12);
+  transform: translateY(-6px);
+}
+.service-select-section .service-card h2 {
+  font-size: 32px;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+.service-select-section .service-card p {
+  opacity: 0.75;
+  font-size: 18px;
+}
+
+/* ==============================
+     Fade-up (사이트 공통)
+============================== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

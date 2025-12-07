@@ -23,7 +23,7 @@ html > body {
 
 /* 커스텀 */
 .top-bar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
