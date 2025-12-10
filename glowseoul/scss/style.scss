@@ -113,17 +113,6 @@ html > body {
         }
       }
 
-      &:last-child {
-        position: relative;
-
-        > a::after {
-          content: "*";
-          font-family: "fontAwesome";
-          margin-left: 8px;
-          transition: color 0.3s, opacity 0.3s;
-        }
-      }
-
       &-text {
         // menu-item-text
         color: #999;
@@ -301,6 +290,19 @@ $video-aspect-ratio: 2.33333;
     font-size: 111px;
     font-weight: bold;
     color: #fff;
+  }
+}
+
+/* 기본: PC/태블릿에서는 br 숨김 */
+.mobile-br {
+  display: none;
+}
+
+/* 모바일에서는 br 보이기 */
+@media (max-width: 768px) {
+  .mobile-br {
+    display: inline;
+    text-align: left;
   }
 }
 
@@ -948,6 +950,7 @@ $video-aspect-ratio: 2.33333;
 ============================= */
 
 .section-4 {
+  overflow-x: hidden;
   width: 100%;
   text-align: center;
   background: #000;

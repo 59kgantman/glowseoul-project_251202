@@ -97,15 +97,6 @@ html > body {
   visibility: visible;
   transform: translate3d(0, 10px, 0);
 }
-.top-bar__menu-1 .menu-item:last-child {
-  position: relative;
-}
-.top-bar__menu-1 .menu-item:last-child > a::after {
-  content: "*";
-  font-family: "fontAwesome";
-  margin-left: 8px;
-  transition: color 0.3s, opacity 0.3s;
-}
 .top-bar__menu-1 .menu-item-text {
   color: #999;
   display: flex;
@@ -248,6 +239,18 @@ html > body {
   color: #fff;
 }
 
+/* 기본: PC/태블릿에서는 br 숨김 */
+.mobile-br {
+  display: none;
+}
+
+/* 모바일에서는 br 보이기 */
+@media (max-width: 768px) {
+  .mobile-br {
+    display: inline;
+    text-align: left;
+  }
+}
 .section-1__body {
   margin-top: 25px;
 }
@@ -808,6 +811,7 @@ html > body {
    SECTION 4 — 리뷰 섹션
 ============================= */
 .section-4 {
+  overflow-x: hidden;
   width: 100%;
   text-align: center;
   background: #000;
