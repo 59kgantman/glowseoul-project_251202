@@ -267,6 +267,6 @@
     padding-left: 0px; /* 텍스트 왼쪽 공간 늘림 */
   }
   .group-desc li::before {
-    left: 75px; /* 체크 아이콘도 텍스트 쪽으로 이동 */
+    left: 20px; /* 체크 아이콘도 텍스트 쪽으로 이동 */
   }
 }
