@@ -3,6 +3,7 @@
       FAQ HERO
 ====================== */
 .faq-hero {
+  margin-bottom: -100px;
   width: 100%;
   height: 65vh;
   background: #000;

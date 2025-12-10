@@ -40,6 +40,7 @@
    HERO ENTER ANIMATION
 ============================ */
 .contact-hero {
+  margin-bottom: -100px;
   opacity: 0;
   animation: heroFadeUp 1.2s ease-out forwards;
   animation-delay: 0.2s; /* 등장 타이밍 */

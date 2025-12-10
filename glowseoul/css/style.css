@@ -913,34 +913,35 @@ html > body {
   }
 }
 /* ===============================
-   Section 5 Title + Underline
+   SECTION 5 — Title + Underline
 ================================= */
-.section5-title-box {
-  text-align: center;
-  margin-bottom: 60px;
+#section-5 {
+  margin-top: -100px;
 }
-
-.section5-title {
-  font-size: 2.8rem;
+#section-5 .section-5-title-box {
+  text-align: center;
+  margin-bottom: 25px;
+}
+#section-5 .section-5-title-box .section-5-title {
+  font-size: 60px;
   font-weight: 700;
   color: #fff;
   margin-bottom: 12px;
   opacity: 0;
   animation: titleFadeUp 1.1s ease-out forwards;
 }
-
-/* 중앙에서 좌우로 뻗는 밑줄 */
-.section5-underline {
+#section-5 .section-5-title-box .section-5-underline {
+  display: block;
   width: 0;
   height: 1px;
-  background-color: #fff;
-  margin: 0 auto;
+  background: #fff;
+  margin: 10px auto 0;
   opacity: 0;
   animation: underlineGrow 1.2s ease-out forwards;
-  animation-delay: 0.3s;
+  animation-delay: 0.3s; /* 제목 뜬 뒤 실행 */
 }
 
-/* Title animation */
+/* Fade-up for Title */
 @keyframes titleFadeUp {
   0% {
     opacity: 0;
@@ -951,7 +952,7 @@ html > body {
     transform: translateY(0);
   }
 }
-/* Underline animation */
+/* Underline Animation */
 @keyframes underlineGrow {
   0% {
     width: 0;
@@ -961,22 +962,25 @@ html > body {
     opacity: 1;
   }
   100% {
-    width: 320px; /* 다른 섹션과 동일한 길이 */
+    width: 350px; /* PC 길이 */
     opacity: 1;
   }
 }
-/* 반응형 */
+/* ===============================
+   Responsive (Mobile)
+================================= */
 @media (max-width: 768px) {
-  .section5-title {
-    font-size: 2rem;
+  #section-5 .section-5-title-box .section-5-title {
+    font-size: 3rem;
   }
+  /* 모바일에서 밑줄 길이만 조정 */
   @keyframes underlineGrow {
     0% {
       width: 0;
       opacity: 0;
     }
     100% {
-      width: 180px; /* 모바일에서는 자연스럽게 더 짧게 */
+      width: 180px; /* Mobile shorter */
       opacity: 1;
     }
   }
@@ -1003,6 +1007,7 @@ html > body {
 }
 
 .media-grid {
+  margin-top: 50px;
   margin-left: auto;
   margin-right: auto; /* 🔥 확실한 중앙 정렬 */
 }
