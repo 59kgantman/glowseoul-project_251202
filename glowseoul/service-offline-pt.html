@@ -47,6 +47,7 @@
     <!-- 공통 CSS -->
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/service.css" />
+    <link rel="stylesheet" href="./css/service-offline-pt.css" />
   </head>
 
   <body class="bg-black text-white">
@@ -150,9 +151,8 @@
       <section class="offline-hero-section">
         <div class="inner">
           <h1 class="hero-title" data-fade-up>OFFLINE PT</h1>
-          <p class="hero-sub" data-fade-up>
-            오프라인에서 직접 경험하는 퍼스널 트레이닝
-          </p>
+          <p class="hero-sub" data-fade-up>오프라인PT 진행 시퀀스</p>
+          <div class="section-underline"></div>
         </div>
       </section>
 
@@ -164,34 +164,65 @@
           <!-- 설명 섹션 -->
           <div class="desc-box">
             <h2 class="section-title" data-fade-up>
-              OFFLINE PERSONAL TRAINING
+              최고에게 직접 지도받는,나만을 위한 맞춤 수업
             </h2>
             <p class="section-text" data-fade-up>
-              Glow Seoul의 오프라인 PT는 1:1 맞춤 케어를 중심으로 정확한 자세,
+              오프라인 PT는 1:1 맞춤 케어를 중심으로 정확한 자세,
               근력 발달, 체형 교정에 중점을 둡니다. 회원님의 현재 신체 상태와
               목표를 기반으로 가장 효율적인 방향으로 설계합니다.
             </p>
           </div>
 
-          <!-- 이미지 or 구성 요소 -->
-          <div class="feature-grid">
-            <div class="feature-item" data-fade-up>
-              <h3>1:1 밀착 지도</h3>
-              <p>정확한 자세, 즉각적인 보정, 안전한 운동 진행</p>
-            </div>
+<section class="offline-detail">
+  <div class="container">
 
-            <div class="feature-item" data-fade-up>
-              <h3>체형 분석 기반 프로그램</h3>
-              <p>체형 불균형 및 기능 평가 후 맞춤 설계</p>
-            </div>
+    <!-- STEP 1 -->
+    <div class="step fade-up">
+      <div class="step__media">
+        <video
+          src="./videos/onlinecoachingprocess1.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+        ></video>
+      </div>
 
-            <div class="feature-item" data-fade-up>
-              <h3>식단 및 생활 루틴 코칭</h3>
-              <p>오프라인 PT와 함께 지속 가능한 라이프스타일 관리</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div class="step__text">
+        <div class="step__meta">STEP 01</div>
+        <h3 class="step__title">초기 체형 분석</h3>
+        <p class="step__desc">
+          오프라인 PT 첫 세션에서 체형 분석 및 간단한 기능성 테스트를 진행합니다.
+        </p>
+      </div>
+    </div>
+
+    <!-- STEP 2 (reverse) -->
+    <div class="step step--reverse fade-up">
+      <div class="step__media">
+        <video
+          src="./videos/onlinecoachingprocess2.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+        ></video>
+      </div>
+
+      <div class="step__text">
+        <div class="step__meta">STEP 02</div>
+        <h3 class="step__title">PT 세션 진행</h3>
+        <p class="step__desc">
+          목표에 맞춰 개별 프로그램 기반으로 오프라인 세션을 진행합니다.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
       <!-- ★ Footer (Price 페이지와 동일) -->
       <footer class="site-footer">
