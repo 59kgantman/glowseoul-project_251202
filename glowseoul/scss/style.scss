@@ -39,8 +39,9 @@ html > body {
   }
 
   img {
-    width: 30%;
-    height: 30%;
+    display: block;
+    width: 200px;
+    height: auto;
     max-height: 20%;
   }
 }
