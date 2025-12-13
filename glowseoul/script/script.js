@@ -46,6 +46,21 @@ document.addEventListener("DOMContentLoaded", () => {
       link.classList.add("active");
     }
   });
+
+  /* =======================
+     📌 4. Top-bar 스크롤 배경
+  ======================= */
+  const topBar = document.querySelector(".top-bar");
+
+  if (topBar) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 40) {
+        topBar.classList.add("scrolled");
+      } else {
+        topBar.classList.remove("scrolled");
+      }
+    });
+  }
 });
 
 /* =======================
