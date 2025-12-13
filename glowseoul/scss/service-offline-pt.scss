@@ -89,6 +89,19 @@
 }
 
 /* ============================
+   TABLET FIX — Section Underline Spacing
+============================ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .section-title {
+    margin-bottom: 26px; // PC보다 조금 줄이고
+  }
+
+  .section-underline {
+    margin-top: 4px; // 🔥 태블릿에서만 미세 여백 추가
+  }
+}
+
+/* ============================
    VARIABLES
 =============================== */
 :root {

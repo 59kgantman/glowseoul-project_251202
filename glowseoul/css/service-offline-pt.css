@@ -82,6 +82,17 @@
   }
 }
 /* ============================
+   TABLET FIX — Section Underline Spacing
+============================ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .section-title {
+    margin-bottom: 26px;
+  }
+  .section-underline {
+    margin-top: 4px;
+  }
+}
+/* ============================
    VARIABLES
 =============================== */
 :root {
