@@ -103,13 +103,13 @@
   color: #e4e4e4;
 
   li {
-    position: relative;
+    display: flex;
     padding-left: 18px;
     margin-bottom: 10px;
+    align-items: center;
 
     &::before {
       content: "✔";
-      position: absolute;
       left: 0;
       top: -2px;
       font-size: 14px;
@@ -264,8 +264,9 @@
     &::before {
       content: "✔";
       position: absolute;
+      align-items: center;
       left: 0px;
-      top: 1px;
+      top: 15px;
       font-size: 14px;
       color: #ff1f6b;
     }
@@ -283,4 +284,10 @@
   .group-desc li::before {
     left: 20px; /* 체크 아이콘도 텍스트 쪽으로 이동 */
   }
+}
+
+.footer-right p {
+  color: rgba(255, 255, 255, 0.8); /* 옅은 크림화이트 */
+  font-size: 16px;
+  line-height: 1.6;
 }

@@ -169,3 +169,9 @@
 .contact-section textarea {
   margin-top: 0px;
 }
+
+.footer-right p {
+  color: rgba(255, 255, 255, 0.8); /* 옅은 크림화이트 */
+  font-size: 16px;
+  line-height: 1.6;
+}
