@@ -228,7 +228,7 @@
     opacity: 1;
   }
 }
-.offline-content-section .lead-target-divider.fade-up.active .divider-line {
+.offline-content-section .lead-target-divider.fade-up.show .divider-line {
   animation: drawDivider 0.9s ease forwards;
   animation-delay: 0.15s;
 }
