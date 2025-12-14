@@ -106,7 +106,7 @@
   margin-bottom: 80px;
 }
 .lead-title {
-  font-size: 28px;
+  font-size: 35px;
   line-height: 1.1;
   font-weight: 700;
 }
@@ -119,6 +119,113 @@
   max-width: 860px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Lead Target 구분 세로선 */
+
+.lead-target-divider {
+  margin-top: -50px;
+  display: flex;
+  justify-content: center;
+  padding: 12px 0 48px;
+}
+
+.lead-target-divider .divider-line {
+  width: 2px;
+  height: 0;
+  background: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+}
+
+@keyframes drawDivider {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: 75px;
+    opacity: 1;
+  }
+}
+
+.lead-target-divider.fade-up.active {
+  .divider-line {
+    animation: drawDivider 0.9s ease forwards;
+    animation-delay: 0.15s;
+  }
+}
+
+.online-target-section {
+  background: #000;
+  padding: 20px 20px;
+  color: #fff;
+}
+
+.online-target-section .inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 60px;
+}
+
+.section-title span {
+  color: #9dff00; /* Glow 포인트 */
+}
+
+.target-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.target-card {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 40px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.target-card:hover {
+  border-color: #9dff00;
+  transform: translateY(-6px);
+}
+
+.target-card p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.target-card strong {
+  color: #9dff00;
+}
+
+@media (max-width: 768px) {
+  .target-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 26px;
+    margin-top: -25px;
+  }
+}
+
+/* Step Intro */
+
+.step-intro {
+  text-align: center;
+  margin: 120px 0 72px;
+  margin-top: 50px;
+}
+
+.step-intro-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 14px;
 }
 
 /* STEP block */
@@ -261,7 +368,7 @@
     max-height: 360px;
   }
   .lead-title {
-    font-size: 24px;
+    font-size: 35px;
   }
 }
 
@@ -285,7 +392,8 @@
     grid-template-columns: 1fr;
   }
   .lead-title {
-    font-size: 20px;
+    font-size: 26px;
+    margin-top: -50px;
   }
   .lead-desc {
     font-size: 14px;
