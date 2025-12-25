@@ -247,12 +247,12 @@ html > body {
 }
 
 .section-1__head .head-sub-title {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: bold;
   color: #b9b9b9;
 }
 .section-1__head .head-main-title {
-  font-size: 111px;
+  font-size: 100px;
   font-weight: bold;
   color: #fff;
 }
@@ -273,7 +273,7 @@ html > body {
   margin-top: 25px;
 }
 .section-1__body .des-text {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   color: #9c9c9c;
 }
